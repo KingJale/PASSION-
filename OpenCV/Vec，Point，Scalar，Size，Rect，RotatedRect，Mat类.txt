@@ -1,0 +1,40 @@
+cv::Vec类
+
+    《基本概念》
+1.cv::Vec类可用来表示固定长度的向量（又称固定类向量），是一个模板类
+2.常用[]访问Vec向量成员
+3.主要用来存储数值向量
+.除cv::Vec类外，还有固定维度的类向量cv::Matx。
+
+    《用法》
+1.cv::Vec类可以定义任意类型的变量:
+
+cv::Vec<double> myVector;  //定义一个存放3个double型变量的向量
+cv::Vec3d v3d(x0,x1,x2);
+
+2.cv::Vec也可以使用以下预定义的类型：
+
+typedef cv::Vec<uchar,"x"> Vec"x"b; x=2,3,4
+typedef cv::Vec<short,"x"> Vec"x"s; x=2,3,4
+typedef cv::Vec<int,"x"> Vec"x"i; x=2,3,4
+typedef cv::Vec<float,"x"> Vec"x"f; x=2,3,4,6
+typedef cv::Vec<double,"x"> Vec"x"d; x=2,3,4,6
+
+3.支持的运算
+
+v1 = v2 + v3;
+v1 = v2 - v3;
+v1 = v2 * scale;
+v1 = scale * v2;
+v1 = -v2;
+v1 += v2;
+v1 == v2;  v1 != v2;
+norm(v1);  //(euclidean norm),即v1的欧几里得范数
+
+
+cv::Point类
+cv::Scalar类
+cv::Size类
+cv::Rect类
+cv::RotatedRect类
+cv::Mat类
